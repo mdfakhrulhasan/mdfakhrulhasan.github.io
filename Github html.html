@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230D5A6E'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EFH%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Md. Fakhrul Hasan">
+<meta property="og:description" content="Md. Fakhrul Hasan, Assistant Professor of Agricultural and Applied Statistics at Bangladesh Agricultural University. Biostatistics, public health and climate data.">
+<meta property="og:type" content="profile">
+<title>Md. Fakhrul Hasan</title>
+<meta name="description" content="Md. Fakhrul Hasan, Assistant Professor of Agricultural and Applied Statistics at Bangladesh Agricultural University. Biostatistics, public health and climate data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; }
+/* Layout: a wide header with river-line contours, then CV rows (section label rail left, content right) that stack to one column on phones. */
+:root {
+  --paper: #F3F6F6;
+  --surface: #FFFFFF;
+  --ink: #13222A;
+  --muted: #55676F;
+  --rule: #D2DCDF;
+  --accent: #0D5A6E;
+  --accent-soft: #E1EDF0;
+  --f-display: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --f-body: "Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0D1518; --surface: #121D21; --ink: #E3EBED; --muted: #94A5AA;
+    --rule: #24343A; --accent: #6CBCCE; --accent-soft: #14292F; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0D1518; --surface: #121D21; --ink: #E3EBED; --muted: #94A5AA;
+  --rule: #24343A; --accent: #6CBCCE; --accent-soft: #14292F; color-scheme: dark;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+
+.wrap {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* ---------- Header ---------- */
+.hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--rule); background: var(--surface); }
+.hero .wrap { position: relative; z-index: 1; padding-block: 1.5rem 2.75rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.contours {
+  position: absolute; z-index: 0; top: 0; right: 0; height: 100%; width: min(560px, 70%);
+  color: var(--accent); opacity: .22; pointer-events: none;
+  -webkit-mask-image: linear-gradient(to left, #000 35%, transparent);
+          mask-image: linear-gradient(to left, #000 35%, transparent);
+}
+.contours path { fill: none; stroke: currentColor; }
+
+.topnav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; font-family: var(--f-mono); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; }
+.topnav a { color: var(--muted); text-decoration: none; }
+.topnav a:hover { color: var(--accent); }
+
+.id { display: flex; flex-direction: column; gap: .6rem; padding-top: 1.75rem; }
+.eyebrow { font-family: var(--f-mono); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0; }
+h1 {
+  font-family: var(--f-display); font-weight: 600; font-optical-sizing: auto;
+  font-size: clamp(2.4rem, 6.5vw, 4.4rem); line-height: 1.04; letter-spacing: -.018em;
+  margin: 0; text-wrap: balance;
+}
+.role { margin: 0; font-size: 1.08rem; color: var(--muted); max-width: 46ch; text-wrap: balance; }
+.lede { margin: .4rem 0 0; font-family: var(--f-display); font-size: clamp(1.2rem, 2.4vw, 1.5rem); line-height: 1.4; max-width: 34ch; font-weight: 500; text-wrap: balance; }
+
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; }
+.profiles { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 0; list-style: none; }
+.profiles a {
+  display: inline-flex; align-items: center; gap: .4rem; padding: .42rem .8rem;
+  border: 1px solid var(--rule); border-radius: 6px; background: var(--paper);
+  color: var(--ink); text-decoration: none; font-size: .9rem; font-weight: 500;
+}
+.profiles a:hover { border-color: var(--accent); color: var(--accent); }
+.profiles a span { font-family: var(--f-mono); font-size: .75rem; color: var(--muted); }
+
+.email { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .5rem; font-family: var(--f-mono); font-size: .9rem; }
+.email-text { user-select: all; overflow-wrap: anywhere; }
+.copy {
+  font: 500 .75rem/1 var(--f-mono); letter-spacing: .05em; text-transform: uppercase;
+  padding: .4rem .6rem; border-radius: 5px; border: 1px solid var(--accent);
+  background: transparent; color: var(--accent); cursor: pointer;
+}
+.copy:hover { background: var(--accent-soft); }
+
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: .5rem 0 0; border-top: 1px solid var(--rule); max-width: 40rem; }
+.facts div { padding: .9rem 1rem .2rem 0; display: flex; flex-direction: column; gap: .1rem; }
+.facts div + div { padding-left: 1rem; border-left: 1px solid var(--rule); }
+.facts dd { margin: 0; order: -1; font-family: var(--f-display); font-size: 2rem; line-height: 1.1; font-weight: 600; font-variant-numeric: tabular-nums lining-nums; }
+.facts dt { font-size: .82rem; color: var(--muted); line-height: 1.35; }
+
+/* ---------- CV rows ---------- */
+main .wrap { padding-block: .5rem 3rem; }
+.row { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: .75rem 3rem; padding-block: 2.4rem; border-top: 1px solid var(--rule); }
+.row:first-child { border-top: 0; }
+.row > h2 {
+  margin: 0; padding-top: .3rem; font-family: var(--f-mono); font-weight: 500; font-size: .78rem;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--accent); line-height: 1.5;
+}
+.content { min-width: 0; display: flex; flex-direction: column; gap: 1.6rem; }
+.prose { display: flex; flex-direction: column; gap: 1rem; }
+.prose p { margin: 0; max-width: 66ch; }
+.prose .direction { padding-left: 1rem; border-left: 2px solid var(--accent); }
+.prose .direction strong { display: block; font-family: var(--f-mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: .2rem; }
+
+.tags { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; margin: 0; padding: 0; }
+.tags li { padding: .32rem .8rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--surface); font-size: .92rem; }
+
+.entries { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1.6rem; }
+.entry { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: .2rem 1.5rem; }
+.when { font-family: var(--f-mono); font-size: .82rem; color: var(--muted); padding-top: .2rem; font-variant-numeric: tabular-nums; }
+.what { min-width: 0; display: flex; flex-direction: column; gap: .25rem; }
+.what h3 { margin: 0; font-family: var(--f-display); font-size: 1.16rem; line-height: 1.32; font-weight: 600; text-wrap: balance; }
+.what p { margin: 0; max-width: 66ch; }
+.meta { color: var(--muted); font-size: .94rem; }
+.venue { font-style: italic; }
+.authors strong { color: var(--ink); font-weight: 600; }
+.doi { font-family: var(--f-mono); font-size: .8rem; overflow-wrap: anywhere; }
+.badge { display: inline-block; margin-left: .4rem; padding: .05rem .45rem; border-radius: 4px; background: var(--accent-soft); color: var(--accent); font: 500 .68rem/1.6 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; vertical-align: .2em; }
+.role-tag { font-family: var(--f-mono); font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.note { font-size: .86rem; color: var(--muted); margin: 0; max-width: 66ch; }
+
+.sub { margin: 0 0 -.6rem; font-family: var(--f-display); font-size: 1.05rem; font-weight: 600; }
+
+.skills { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: .6rem 1.5rem; margin: 0; }
+.skills dt { font-weight: 600; font-size: .95rem; }
+.skills dd { margin: 0; color: var(--muted); }
+
+.contact-block { display: flex; flex-direction: column; gap: .9rem; }
+.contact-block address { font-style: normal; color: var(--muted); max-width: 40ch; }
+.contact-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: .5rem 1.5rem; }
+.contact-list li { display: flex; flex-direction: column; }
+.contact-list span { font-family: var(--f-mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.contact-list a { overflow-wrap: anywhere; }
+
+footer { border-top: 1px solid var(--rule); }
+footer .wrap { padding-block: 1.25rem 2rem; font-family: var(--f-mono); font-size: .75rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between; }
+
+@media (max-width: 760px) {
+  .row { grid-template-columns: minmax(0, 1fr); padding-block: 2rem; }
+  .entry { grid-template-columns: minmax(0, 1fr); }
+  .skills { grid-template-columns: minmax(0, 1fr); gap: .1rem; }
+  .skills dd { margin-bottom: .6rem; }
+  .contours { width: 100%; opacity: .13; }
+}
+@media (max-width: 460px) {
+  .facts dd { font-size: 1.6rem; }
+  .facts div + div { padding-left: .7rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="contours" id="contours" viewBox="0 0 560 420" preserveAspectRatio="xMaxYMid slice" aria-hidden="true"></svg>
+  <div class="wrap">
+    <nav class="topnav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="id">
+      <p class="eyebrow">Biostatistics · Public health · Climate data</p>
+      <h1>Md. Fakhrul Hasan</h1>
+      <p class="role">Assistant Professor, Department of Agricultural and Applied Statistics, Bangladesh Agricultural University, Mymensingh</p>
+      <p class="lede">I build statistical models that link climate and environmental data to health and livelihoods in Bangladesh.</p>
+    </div>
+
+    <div class="actions">
+      <ul class="profiles">
+        <li><a href="https://scholar.google.com/citations?user=2-6HefEAAAAJ" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://orcid.org/0009-0001-2193-1512" rel="noopener">ORCID <span>0009-0001-2193-1512</span></a></li>
+        <li><a href="https://www.researchgate.net/profile/Md-Hasan-1044" rel="noopener">ResearchGate</a></li>
+        <li><a href="https://www.linkedin.com/in/md-fakhrulhasan" rel="noopener">LinkedIn</a></li>
+      </ul>
+      <div class="email">
+        <span class="email-text" id="email-top">fakhrul.stat@bau.edu.bd</span>
+        <button type="button" class="copy" id="copy-email-top" data-copy="fakhrul.stat@bau.edu.bd" data-target="email-top">Copy</button>
+      </div>
+    </div>
+
+    <dl class="facts">
+      <div><dt>M.Sc. Statistics CGPA, of 4.00</dt><dd>3.98</dd></div>
+      <div><dt>B.Sc. Statistics CGPA, of 4.00</dt><dd>3.93</dd></div>
+      <div><dt>Peer-reviewed papers since 2024</dt><dd>4</dd></div>
+    </dl>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="row" id="about">
+      <h2>About</h2>
+      <div class="content prose">
+        <p>I am an Assistant Professor in the Department of Agricultural and Applied Statistics at Bangladesh Agricultural University (BAU), where I have taught since December 2022. I teach applied statistics with R, SPSS and Stata. My research uses regression, panel-data and time-series methods on health, climate and agricultural data from Bangladesh.</p>
+        <p>My M.Sc. thesis at the University of Rajshahi analysed maternal and parental risk factors for autism spectrum disorder, using community survey data from northern Bangladesh. At BAU, I led a project funded by the Ministry of Science and Technology as Principal Investigator, studying how climate-related stresses constrain rice production in southern Bangladesh. My recent papers relate climate and weather variation to crop production, including a district-level panel study of coastal Bangladesh.</p>
+        <p class="direction"><strong>Current direction</strong>I now want to apply these methods to urban health: how flooding, heat and water stress affect people living in the river and coastal cities of Bangladesh, and how routine health and climate records can become evidence that city planners can act on.</p>
+      </div>
+    </section>
+
+    <section class="row" id="interests">
+      <h2>Research interests</h2>
+      <div class="content">
+        <ul class="tags">
+          <li>Biostatistics</li>
+          <li>Public health statistics</li>
+          <li>Environmental statistics</li>
+          <li>Time series analysis and forecasting</li>
+          <li>Statistical modelling</li>
+          <li>Applied econometrics</li>
+          <li>Agricultural statistics</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="row" id="publications">
+      <h2>Publications</h2>
+      <div class="content">
+        <ol class="entries">
+          <li class="entry">
+            <div class="when">2026</div>
+            <div class="what">
+              <h3>Climate Variability and Rice Production Vulnerability in Coastal Bangladesh: A District-level Panel Data Analysis</h3>
+              <p class="meta authors">Nowshin, S. N., Akter, R., Momo, A. T., Sarkar, B. C., <strong>Hasan, M. F.</strong>, Islam, M. S., &amp; Sayem, S. M.</p>
+              <p class="meta"><span class="venue">Asian Journal of Research in Crop Science</span>, 11(1), 104–123</p>
+              <a class="doi" href="https://doi.org/10.9734/ajrcs/2026/v11i1409" rel="noopener">doi:10.9734/ajrcs/2026/v11i1409</a>
+            </div>
+          </li>
+          <li class="entry">
+            <div class="when">2024</div>
+            <div class="what">
+              <h3>Forecasting Leafy Vegetable Production in Bangladesh: Unravelling the Nexus Among Agro-Meteorological Factors<span class="badge">First author</span></h3>
+              <p class="meta authors"><strong>Hasan, M. F.</strong>, Sayem, S. M., Hossen, M. B., &amp; Rashid, M. B.</p>
+              <p class="meta"><span class="venue">International Journal of Research – GRANTHAALAYAH</span>, 12(10), 98–105</p>
+              <a class="doi" href="https://doi.org/10.29121/granthaalayah.v12.i10.2024.5825" rel="noopener">doi:10.29121/granthaalayah.v12.i10.2024.5825</a>
+            </div>
+          </li>
+          <li class="entry">
+            <div class="when">2024</div>
+            <div class="what">
+              <h3>Growth, Instability in Production and Price Forecasting of Onion in Bangladesh</h3>
+              <p class="meta authors">Jubayer, M. A., Alam, M. A., Imam, M. F., &amp; <strong>Hasan, M. F.</strong></p>
+              <p class="meta"><span class="venue">Journal of the Bangladesh Agricultural University</span>, 22(3), 377–385</p>
+              <a class="doi" href="https://doi.org/10.3329/jbau.v22i3.76411" rel="noopener">doi:10.3329/jbau.v22i3.76411</a>
+            </div>
+          </li>
+          <li class="entry">
+            <div class="when">2024</div>
+            <div class="what">
+              <h3>Determinants of Educational Performance Among Agricultural Students in Bangladesh</h3>
+              <p class="meta authors">Ferdous, Z., Sayem, S. M., Islam, M. A., &amp; <strong>Hasan, M. F.</strong></p>
+              <p class="meta"><span class="venue">The Bangladesh Journal of Agricultural Economics</span>, 44(1&amp;2), 52–66</p>
+              <a class="doi" href="https://bjae.bau.edu.bd/index.php/home/article/view/242" rel="noopener">bjae.bau.edu.bd/…/article/view/242</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="row" id="projects">
+      <h2>Research projects</h2>
+      <div class="content">
+        <ul class="entries">
+          <li class="entry">
+            <div class="when">2023 – 2024</div>
+            <div class="what">
+              <span class="role-tag">Principal Investigator</span>
+              <h3>Constraints of Rice Production in Southern Region of Bangladesh: Impact of Climatic Related Issues</h3>
+              <p class="meta">Funded by the Ministry of Science and Technology (MoST), Bangladesh</p>
+              <p>Designed the study, carried out the statistical analysis and prepared the project report.</p>
+            </div>
+          </li>
+          <li class="entry">
+            <div class="when">2019 – 2020</div>
+            <div class="what">
+              <span class="role-tag">Research Assistant</span>
+              <h3>Pattern and Predictors of Autism Problem in Northern Part of Bangladesh</h3>
+              <p>Managed the survey data, ran the statistical analysis in SPSS and contributed to report writing.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="row" id="experience">
+      <h2>Experience</h2>
+      <div class="content">
+        <ul class="entries">
+          <li class="entry">
+            <div class="when">Dec 2024 – now</div>
+            <div class="what">
+              <h3>Assistant Professor</h3>
+              <p class="meta">Department of Agricultural and Applied Statistics, Bangladesh Agricultural University, Mymensingh</p>
+            </div>
+          </li>
+          <li class="entry">
+            <div class="when">Dec 2022 – Dec 2024</div>
+            <div class="what">
+              <h3>Lecturer</h3>
+              <p class="meta">Department of Agricultural and Applied Statistics, Bangladesh Agricultural University, Mymensingh</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="row" id="education">
+      <h2>Education</h2>
+      <div class="content">
+        <ul class="entries">
+          <li class="entry">
+            <div class="when">2020 – 2022</div>
+            <div class="what">
+              <h3>M.Sc. in Statistics, University of Rajshahi</h3>
+              <p class="meta">CGPA 3.98 / 4.00 · Thesis group</p>
+              <p><em>Thesis:</em> Analyzing Maternal and Parental Factors as a Risk of Autism Spectrum Disorder in Northern Part of Bangladesh</p>
+              <p class="meta">Selected coursework: Advanced Biostatistics, Time Series Analysis and Forecasting, Advanced Multivariate Analysis, Advanced Demography, Data Mining, Advanced Experimental Design</p>
+            </div>
+          </li>
+          <li class="entry">
+            <div class="when">2016 – 2020</div>
+            <div class="what">
+              <h3>B.Sc. (Honours) in Statistics, University of Rajshahi</h3>
+              <p class="meta">CGPA 3.93 / 4.00</p>
+              <p class="meta">Selected coursework: Biostatistics and Bioinformatics, Demography, Economic Statistics and Econometrics, Regression Analysis, Stochastic Processes, Sampling Techniques</p>
+            </div>
+          </li>
+        </ul>
+        <p class="note">Grading at the University of Rajshahi: A+ (4.00) is awarded for marks of 80% and above, A (3.75) for 75–79%, A− (3.50) for 70–74%.</p>
+      </div>
+    </section>
+
+    <section class="row" id="honours">
+      <h2>Honours</h2>
+      <div class="content">
+        <ul class="entries">
+          <li class="entry">
+            <div class="when">Dec 2024</div>
+            <div class="what">
+              <h3>Professor Emeritus Dr. Mukhtar Mohammed Ali Scholarship</h3>
+              <p class="meta">Department of Statistics, University of Rajshahi. For outstanding academic performance in the Master’s programme.</p>
+            </div>
+          </li>
+          <li class="entry">
+            <div class="when">Jun 2023</div>
+            <div class="what">
+              <h3>Dean’s Award 2021</h3>
+              <p class="meta">Faculty of Sciences, University of Rajshahi. For excellent academic performance in the Bachelor’s programme.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="row" id="conferences">
+      <h2>Conferences &amp; training</h2>
+      <div class="content">
+        <h3 class="sub">Conferences</h3>
+        <ul class="entries">
+          <li class="entry">
+            <div class="when">Aug 2026</div>
+            <div class="what">
+              <h3>19th National Statistical Conference: Advancing Official Statistics through Data Science</h3>
+              <p class="meta">Bangladesh Statistical Association</p>
+            </div>
+          </li>
+          <li class="entry">
+            <div class="when">Dec 2024</div>
+            <div class="what">
+              <h3>8th International Conference: The Role of Statistics and Data Science in 4IR</h3>
+              <p class="meta">Department of Statistics, University of Rajshahi</p>
+            </div>
+          </li>
+          <li class="entry">
+            <div class="when">Dec 2019</div>
+            <div class="what">
+              <h3>7th International Conference: Data Science and SDGs: Challenges, Opportunities and Realities</h3>
+              <p class="meta">Department of Statistics, University of Rajshahi</p>
+            </div>
+          </li>
+        </ul>
+        <h3 class="sub">Training</h3>
+        <ul class="entries">
+          <li class="entry">
+            <div class="when">Feb 2026</div>
+            <div class="what">
+              <h3>Strengthening Agricultural Research Capacities of Early-Career Academics for Sustainable Development in Haor Areas of Bangladesh</h3>
+              <p class="meta">Graduate Training Institute, Bangladesh Agricultural University</p>
+            </div>
+          </li>
+          <li class="entry">
+            <div class="when">Aug 2025</div>
+            <div class="what">
+              <h3>Capacity Building of Agricultural Research in Higher Education</h3>
+              <p class="meta">Bangladesh Agricultural University Research System (BAURES)</p>
+            </div>
+          </li>
+          <li class="entry">
+            <div class="when">Apr – May 2024</div>
+            <div class="what">
+              <h3>Foundation Training for University Teachers</h3>
+              <p class="meta">Graduate Training Institute, Bangladesh Agricultural University</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="row" id="skills">
+      <h2>Skills</h2>
+      <div class="content">
+        <dl class="skills">
+          <dt>Statistical computing</dt><dd>R, Python, SPSS, Stata</dd>
+          <dt>Office &amp; references</dt><dd>Microsoft Word, Excel, PowerPoint; Mendeley</dd>
+          <dt>Languages</dt><dd>Bangla (native); English (professional working proficiency)</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="row" id="service">
+      <h2>Service</h2>
+      <div class="content">
+        <ul class="entries">
+          <li class="entry">
+            <div class="when">2018 – 2019</div>
+            <div class="what">
+              <h3>Education and Research Secretary, Rajshahi University Science Club</h3>
+              <p class="meta">Organised science seminars and academic events, and supported student research activities.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="row" id="contact">
+      <h2>Contact</h2>
+      <div class="content contact-block">
+        <div class="email">
+          <span class="email-text" id="email-bottom">fakhrul.stat@bau.edu.bd</span>
+          <button type="button" class="copy" id="copy-email-bottom" data-copy="fakhrul.stat@bau.edu.bd" data-target="email-bottom">Copy</button>
+        </div>
+        <address>Department of Agricultural and Applied Statistics<br>Bangladesh Agricultural University<br>Mymensingh-2202, Bangladesh</address>
+        <ul class="contact-list">
+          <li><span>ORCID</span><a href="https://orcid.org/0009-0001-2193-1512" rel="noopener">0009-0001-2193-1512</a></li>
+          <li><span>Google Scholar</span><a href="https://scholar.google.com/citations?user=2-6HefEAAAAJ" rel="noopener">Profile and citations</a></li>
+          <li><span>ResearchGate</span><a href="https://www.researchgate.net/profile/Md-Hasan-1044" rel="noopener">Md-Hasan-1044</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/md-fakhrulhasan" rel="noopener">md-fakhrulhasan</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Md. Fakhrul Hasan · Bangladesh Agricultural University</span>
+    <span>Updated November 2026</span>
+  </div>
+</footer>
+
+<script>
+  // River-line contours for the header: gently meandering lines, like water seen from above.
+  (function () {
+    var svg = document.getElementById('contours');
+    if (!svg) return;
+    var ns = 'http://www.w3.org/2000/svg';
+    var lines = 13, W = 560;
+    for (var i = 0; i < lines; i++) {
+      var y = 24 + i * 30;
+      var a = 10 + 6 * Math.sin(i * 0.9);
+      var d = 'M -10 ' + y +
+        ' C 110 ' + (y - a) + ', 190 ' + (y + a * 1.3) + ', 290 ' + (y + a * 0.2) +
+        ' S 470 ' + (y - a * 1.1) + ', ' + (W + 10) + ' ' + (y + a * 0.4);
+      var p = document.createElementNS(ns, 'path');
+      p.setAttribute('d', d);
+      p.setAttribute('stroke-width', i % 4 === 0 ? '1.6' : '0.9');
+      svg.appendChild(p);
+    }
+  })();
+
+  // Copy-email buttons; fall back to selecting the address if the clipboard is refused.
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var label = btn.textContent;
+      function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = label; }, 1800); }
+      function fallback() {
+        var el = document.getElementById(btn.dataset.target);
+        try {
+          var r = document.createRange(); r.selectNodeContents(el);
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+          done('Selected');
+        } catch (e) { done('Copy failed'); }
+      }
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(btn.dataset.copy).then(function () { done('Copied'); }, fallback);
+        } else { fallback(); }
+      } catch (e) { fallback(); }
+    });
+  });
+</script>
+
+</body>
+</html>
