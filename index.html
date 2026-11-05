@@ -63,6 +63,7 @@ a:hover { text-decoration-thickness: 2px; }
 /* ---------- Pinned menu (appears after scrolling past the top menu) ---------- */
 .stickynav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid var(--rule); transform: translateY(-100%); visibility: hidden; transition: transform .25s ease, visibility .25s; }
 .stickynav.show { transform: none; visibility: visible; }
+.stickynav .progress { position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%; background: var(--accent-bright); transform: scaleX(0); transform-origin: left center; pointer-events: none; }
 .stickynav .wrap { padding-block: .55rem; display: flex; justify-content: flex-end; }
 @media (prefers-reduced-motion: reduce) { .stickynav { transition: none; } }
 main section { scroll-margin-top: calc(var(--navh, 3.5rem) + .5rem); }
@@ -206,6 +207,7 @@ footer .sep { color: var(--halo-deep); margin: 0 .5rem; }
 <body>
 
 <div class="stickynav" id="stickynav" inert>
+  <div class="progress" id="readprogress" aria-hidden="true"></div>
   <div class="wrap">
     <nav class="topnav" aria-label="Sections (pinned)">
       <a href="#about">About</a>
@@ -608,6 +610,15 @@ footer .sep { color: var(--halo-deep); margin: 0 .5rem; }
   if (!bar || !top || !('IntersectionObserver' in window)) return;
   function setH() { document.documentElement.style.setProperty('--navh', bar.offsetHeight + 'px'); }
   setH(); window.addEventListener('resize', setH);
+  var prog = document.getElementById('readprogress'), ticking = false;
+  function upd() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    if (prog) prog.style.transform = 'scaleX(' + p + ')';
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(upd); } }, { passive: true });
+  window.addEventListener('resize', upd); upd();
   new IntersectionObserver(function (entries) {
     var hidden = !entries[0].isIntersecting;
     bar.classList.toggle('show', hidden);
