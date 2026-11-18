@@ -18,7 +18,7 @@
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; }
 img { max-width: 100%; }
-/* Layout: light header with a large portrait and a soft halo circle; CV rows below (label rail left, content right); white copyright footer. */
+/* Layout: light header with a large portrait and a soft halo circle; CV rows below (label rail left, content right); deep-blue copyright footer. */
 :root {
   --paper: #F6F8FA;
   --surface: #FFFFFF;
@@ -143,7 +143,7 @@ h1 {
 
 /* ---------- CV rows ---------- */
 main { background: var(--paper); }
-main .wrap { padding-block: .5rem 3.5rem; }
+main .wrap { padding-block: .5rem 1rem; }
 .row { display: grid; grid-template-columns: 11.5rem minmax(0, 1fr); gap: .75rem 3rem; padding-block: 2.5rem; border-top: 1px solid var(--rule); }
 .row > h2 { margin: 0; padding-top: .2rem; font-weight: 700; font-size: .84rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); line-height: 1.5; }
 .content { min-width: 0; display: flex; flex-direction: column; gap: 1.6rem; }
@@ -200,11 +200,13 @@ main .wrap { padding-block: .5rem 3.5rem; }
 @media (prefers-reduced-motion: reduce) { .contact-list li { transition: none; } .contact-list li:hover { transform: none; } }
 
 /* ---------- Footer ---------- */
-footer { background: var(--surface); border-top: 1px solid var(--rule); }
-footer .wrap { padding-block: 1.6rem 2rem; text-align: center; color: var(--muted); font-size: 1rem; }
+footer { background: #0B2F4A; border-top: 3px solid var(--accent-bright); }
+footer .wrap { padding-block: .85rem .95rem; text-align: center; color: #E3EEF6; font-size: .92rem; line-height: 1.45; }
 footer p { margin: 0; }
-footer .updated { margin-top: .3rem; font-size: .85rem; }
-footer .sep { color: var(--halo-deep); margin: 0 .5rem; }
+footer .updated { margin-top: .1rem; font-size: .8rem; color: #A9C3D6; }
+footer .sep { color: #3F6888; margin: 0 .5rem; }
+footer .nw { white-space: nowrap; }
+@media (max-width: 480px) { footer .sep { display: none; } footer .nw { display: block; } }
 
 @media (max-width: 760px) {
   .intro { grid-template-columns: minmax(0, 1fr); padding-top: .75rem; }
@@ -627,7 +629,7 @@ footer .sep { color: var(--halo-deep); margin: 0 .5rem; }
         </div>
         <address>Department of Agricultural and Applied Statistics<br>Bangladesh Agricultural University<br>Mymensingh-2202, Bangladesh</address>
         <ul class="contact-list">
-          <li class="wide"><span>BAU Faculty Profile</span><a href="https://stat.bau.edu.bd/profile/STAT1019" rel="noopener">Bangladesh Agricultural University</a></li>
+          <li class="wide"><span>Faculty Profile</span><a href="https://stat.bau.edu.bd/profile/STAT1019" rel="noopener">Bangladesh Agricultural University</a></li>
           <li><span>ORCID</span><a href="https://orcid.org/0009-0001-2193-1512" rel="noopener">0009-0001-2193-1512</a></li>
           <li><span>Google Scholar</span><a href="https://scholar.google.com/citations?user=2-6HefEAAAAJ" rel="noopener">Profile and citations</a></li>
           <li><span>ResearchGate</span><a href="https://www.researchgate.net/profile/Md-Hasan-1044" rel="noopener">Md-Hasan-1044</a></li>
@@ -641,7 +643,7 @@ footer .sep { color: var(--halo-deep); margin: 0 .5rem; }
 
 <footer>
   <div class="wrap">
-    <p>Copyright © 2026 Md. Fakhrul Hasan<span class="sep">|</span>All rights reserved</p>
+    <p><span class="nw">Copyright © 2026 Md. Fakhrul Hasan</span><span class="sep">|</span><span class="nw">All rights reserved</span></p>
     <p class="updated">Last updated: November 2026</p>
   </div>
 </footer>
