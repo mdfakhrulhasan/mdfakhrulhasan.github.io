@@ -79,7 +79,7 @@ main section { scroll-margin-top: calc(var(--navh, 3.5rem) + .5rem); }
   width: min(820px, 95vw); aspect-ratio: 1; right: -14%; top: -42%;
   background: linear-gradient(160deg, var(--halo-deep) 0%, var(--halo) 35%, var(--paper) 75%);
 }
-.hero .wrap { position: relative; z-index: 1; padding-block: 1.6rem 3.75rem; display: flex; flex-direction: column; gap: 1.75rem; }
+.hero .wrap { position: relative; z-index: 1; padding-block: 1.6rem 2rem; display: flex; flex-direction: column; gap: 1.75rem; }
 
 .topbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: .75rem 2rem; }
 .topnav { display: flex; flex-wrap: wrap; gap: .25rem 1.6rem; }
@@ -168,6 +168,7 @@ main .wrap { padding-block: .5rem 3.5rem; }
 .what p { margin: 0; max-width: 68ch; }
 .meta { color: var(--muted); font-size: .98rem; }
 .venue { font-style: italic; }
+.what p.course { margin: .1rem 0 .1rem; font-style: italic; color: var(--text); }
 .what p.desc { margin-top: .35rem; padding-left: .85rem; border-left: 3px solid var(--halo-deep); color: var(--text); }
 .authors strong { color: var(--ink); font-weight: 600; }
 .doi { font-family: var(--f-mono); font-size: .8rem; overflow-wrap: anywhere; }
@@ -402,25 +403,28 @@ footer .sep { color: var(--halo-deep); margin: 0 .5rem; }
           <li class="entry">
             <div class="when">Aug 2026</div>
             <div class="what">
-              <h3>Resource Person, Data Analysis using IBM SPSS and STATA for Agribusiness and Development Research</h3>
+              <h3>Resource Person</h3>
+              <p class="course">Data Analysis using IBM SPSS and STATA for Agribusiness and Development Research</p>
               <p class="meta">Institute of Agribusiness and Development Studies (IADS), Bangladesh Agricultural University</p>
-              <p class="meta">Taught the IBM SPSS session on descriptive statistics, cross-tabulation and graphical presentation in a 10-day hands-on workshop.</p>
+              <p class="desc">Taught the IBM SPSS session on descriptive statistics, cross-tabulation and graphical presentation in a 10-day hands-on workshop.</p>
             </div>
           </li>
           <li class="entry">
             <div class="when">Jul 2026</div>
             <div class="what">
-              <h3>Volunteer Trainer, Microsoft Excel</h3>
+              <h3>Volunteer Trainer</h3>
+              <p class="course">Excel Excellence: Master Excel from Zero to Hero</p>
               <p class="meta">Bangladesh Agricultural University Career Club (BAUCC)</p>
-              <p class="meta">Conducted a one-day hands-on workshop for students on Excel functions, data management and basic data analysis for academic and research work.</p>
+              <p class="desc">Conducted a one-day hands-on workshop for students on Excel functions, data management and basic data analysis for academic and research work.</p>
             </div>
           </li>
           <li class="entry">
             <div class="when">Apr 2026</div>
             <div class="what">
-              <h3>Resource Person, Fisheries Data Analysis, Visualization, and Modeling Using R</h3>
+              <h3>Resource Person</h3>
+              <p class="course">Fisheries Data Analysis, Visualization, and Modeling Using R</p>
               <p class="meta">Fisheries Division, Bangladesh Agricultural Research Council (BARC); held at the Bangladesh Fisheries Research Institute (BFRI), Mymensingh</p>
-              <p class="meta">Taught sessions on data import, export and transformation and on two-sample t-tests in R to 25 BFRI researchers and officers, and prepared the instructional material for these sessions.</p>
+              <p class="desc">Taught sessions on data import, export and transformation and on two-sample t-tests in R to 25 BFRI researchers and officers, and prepared the instructional material for these sessions.</p>
             </div>
           </li>
         </ul>
